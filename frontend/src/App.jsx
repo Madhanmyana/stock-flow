@@ -19,7 +19,8 @@ import {
   UserCheck
 } from 'lucide-react';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
+const rawApiUrl = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
+const API_BASE_URL = rawApiUrl.replace(/\/+$/, '');
 const TOKEN_KEY = 'stockflow_jwt_token';
 
 // ============================================================================
